@@ -9,7 +9,8 @@ import java.util.Scanner;
 
 public class LootGenerator {
     /** The path to the dataset (either the small or large set). */
-    private static final String DATA_SET = "data/small";
+    private static final String DATA_SET_SMALL = "data/small";
+    private static final String DATA_SET_LARGE = "data/large";
     private static final int TREASURE_OPTIONS = 3;
     
 
@@ -44,8 +45,12 @@ public class LootGenerator {
         // System.out.println("level :" + monster.level);
         // System.out.println("treasureClass :" + monster.treasureClass);
     }
+
+    public String fetchTreasureClass(Monster monster) {
+        return monster.treasureClass;
+    }
     
-    public String fetchTreasureClass(String filename, String treasureClassName) throws IOException {
+    public String generateBaseItem(String filename, String treasureClassName) throws IOException {
         Scanner treasureFile;
         treasureFile = new Scanner(new File(filename));
 
@@ -96,7 +101,7 @@ public class LootGenerator {
         return curTreasure;
     }
         
-    public int generateBaseItem(String filename, String armorName) throws IOException {
+    public int generateBaseStats(String filename, String armorName) throws IOException {
         Scanner armorFile;
         armorFile = new Scanner(new File(filename));
 
@@ -142,12 +147,12 @@ public class LootGenerator {
     public static void main(String[] args) throws IOException {
         System.out.println("This program kills monsters and generates loot!");
         LootGenerator loots = new LootGenerator();
-        Monster monster = loots.pickMonster("data/small/monstats.txt");
-
-        String armor = loots.fetchTreasureClass("data/small/TreasureClassEx.txt", monster.treasureClass);
+        Monster monster = loots.pickMonster(DATA_SET_SMALL + "/monstats.txt");
+        String treasureClass = loots.fetchTreasureClass(monster);
+        String armor = loots.generateBaseItem(DATA_SET_SMALL + "/TreasureClassEx.txt", treasureClass);
         System.out.println(armor);
 
-        int defenseNum = loots.generateBaseItem("data/small/armor.txt", armor);
+        int defenseNum = loots.generateBaseStats(DATA_SET_SMALL + "/armor.txt", armor);
         System.out.println(defenseNum);
 
     }
