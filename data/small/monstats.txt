@@ -1,1 +1,1 @@
-Hell Bovine	Cow	90	Cow (H)
+HellBovine	Cow	90	Cow (H)

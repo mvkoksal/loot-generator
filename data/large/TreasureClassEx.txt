@@ -1,1 +1,68 @@
-Act 1 Cast A	Act 1 Junk	Act 1 Equip A	Act 1 JunkAct 1 Cast B	Act 1 Junk	Act 1 Equip B	Act 1 JunkAct 1 Cast C	Act 1 Junk	Act 1 Equip C	Act 1 JunkAct 1 Equip A	armo3	armo3	armo3Act 1 Equip B	armo3	armo3	armo6Act 1 Equip C	armo3	armo3	armo6Act 1 Good	armo3	armo6	armo9Act 1 H2H A	Act 1 Junk	Act 1 Equip A	Act 1 JunkAct 1 H2H B	Act 1 Junk	Act 1 Equip B	Act 1 JunkAct 1 H2H C	Act 1 Junk	Act 1 Equip C	Act 1 JunkAct 1 Junk	armo3	armo3	armo3Act 1 Miss B	Act 1 Junk	Act 1 Equip B	Act 1 JunkAct 2 Cast A	Act 1 Junk	Act 2 Equip A	Act 2 JunkAct 2 Cast B	Act 1 Junk	Act 2 Equip B	Act 2 JunkAct 2 Equip A	armo6	armo6	armo9Act 2 Equip B	armo9	armo9	armo12Act 2 Equip C	armo12	armo12	armo15Act 2 H2H A	Act 1 Junk	Act 2 Equip A	Act 2 JunkAct 2 H2H B	Act 1 Junk	Act 2 Equip B	Act 2 JunkAct 2 H2H C	Act 1 Junk	Act 2 Equip C	Act 2 JunkAct 2 Junk	Act 1 Junk	armo6	armo6Act 2 Magic C	armo6	armo9	armo12Act 2 Miss A	Act 1 Junk	Act 2 Equip A	Act 2 JunkAct 2 Wraith C	Act 3 Good	Act 2 Magic C	armo3Act 3 Cast A	Act 1 Junk	Act 3 Equip A	Act 3 JunkAct 3 Equip A	armo15	armo15	armo18Act 3 Equip B	armo18	armo18	armo21Act 3 Good	armo18	armo21	armo24Act 3 H2H A	Act 1 Junk	Act 3 Equip A	Act 3 JunkAct 3 H2H B	Act 1 Junk	Act 3 Equip B	Act 3 JunkAct 3 Junk	Act 2 Junk	Act 1 Junk	armo15Act 3 Magic A	armo18	armo21	armo24Act 3 Wraith A	Act 3 Good	Act 3 Magic A	armo3Act 4 Cast A	Act 1 Junk	Act 4 Equip A	Act 4 JunkAct 4 Equip A	armo24	armo24	armo27Act 4 Equip B	armo27	armo27	armo30Act 4 Good	armo27	armo30	armo30Act 4 H2H A	Act 1 Junk	Act 4 Equip A	Act 4 JunkAct 4 H2H B	Act 1 Junk	Act 4 Equip B	Act 4 JunkAct 4 Junk	Act 3 Junk	Act 2 Junk	armo24Act 4 Magic A	armo27	armo30	armo30Act 4 Wraith A	Act 4 Good	Act 4 Magic A	armo3Act 5 Cast C	Act 1 Junk	Act 5 Equip C	Act 5 JunkAct 5 Equip A	armo27	armo27	armo30Act 5 Equip B	armo30	armo30	armo33Act 5 Equip C	armo30	armo30	armo36Act 5 H2H A	Act 1 Junk	Act 5 Equip A	Act 5 JunkAct 5 H2H B	Act 1 Junk	Act 5 Equip B	Act 5 JunkAct 5 H2H C	Act 1 Junk	Act 5 Equip C	Act 5 JunkAct 5 Junk	Act 4 Junk	Act 3 Junk	armo30armo12	Helm	Ring Mail	Large Shieldarmo15	Scale Mail	Bracers	Chain Bootsarmo18	Full Helm	Chain Mail	Kite Shieldarmo21	Mask	Breast Plate	Splint Mailarmo24	Great Helm	Tower Shield	Bone Helmarmo27	Plate Mail	Spirit Mask	Avenger Guardarmo3	Cap	Quilted Armor	Bucklerarmo30	Crown	Field Plate	Gaunletsarmo33	Gothic Plate	Gothic Shield	Griffon Headressarmo36	Light Plate	War Hat	Ghost Armorarmo39	Full Plate Mail	Sallet	Serpentskin Armorarmo6	Skull Cap	Leather Armor	Hard Leather Armorarmo9	Studded Leather	Heavy Gloves	Heavy BootsDiablo	Act 1 Junk	Act 5 Equip A	Act 5 JunkQuill 1	Act 1 Junk	Act 1 Junk	armo3Quill 4	Act 1 Junk	Act 1 Junk	Act 1 GoodSwarm 2	Act 1 Good	Act 2 Magic C	Act 3 GoodTrapped Soul	Act 1 Junk	Act 4 Equip A	Act 4 Junk
+Act 1 Cast A	Act 1 Junk	Act 1 Equip A	Act 1 Junk
+Act 1 Cast B	Act 1 Junk	Act 1 Equip B	Act 1 Junk
+Act 1 Cast C	Act 1 Junk	Act 1 Equip C	Act 1 Junk
+Act 1 Equip A	armo3	armo3	armo3
+Act 1 Equip B	armo3	armo3	armo6
+Act 1 Equip C	armo3	armo3	armo6
+Act 1 Good	armo3	armo6	armo9
+Act 1 H2H A	Act 1 Junk	Act 1 Equip A	Act 1 Junk
+Act 1 H2H B	Act 1 Junk	Act 1 Equip B	Act 1 Junk
+Act 1 H2H C	Act 1 Junk	Act 1 Equip C	Act 1 Junk
+Act 1 Junk	armo3	armo3	armo3
+Act 1 Miss B	Act 1 Junk	Act 1 Equip B	Act 1 Junk
+Act 2 Cast A	Act 1 Junk	Act 2 Equip A	Act 2 Junk
+Act 2 Cast B    Act 1 Junk	Act 2 Equip B	Act 2 Junk
+Act 2 Equip A	armo6	armo6	armo9
+Act 2 Equip B	armo9	armo9	armo12
+Act 2 Equip C	armo12	armo12	armo15
+Act 2 H2H A	Act 1 Junk	Act 2 Equip A	Act 2 Junk
+Act 2 H2H B	Act 1 Junk	Act 2 Equip B	Act 2 Junk
+Act 2 H2H C	Act 1 Junk	Act 2 Equip C	Act 2 Junk
+Act 2 Junk	Act 1 Junk	armo6	armo6
+Act 2 Magic C	armo6	armo9	armo12
+Act 2 Miss A	Act 1 Junk	Act 2 Equip A	Act 2 Junk
+Act 2 Wraith C	Act 3 Good	Act 2 Magic C	armo3
+Act 3 Cast A	Act 1 Junk	Act 3 Equip A	Act 3 Junk
+Act 3 Equip A	armo15	armo15	armo18
+Act 3 Equip B	armo18	armo18	armo21
+Act 3 Good	armo18	armo21	armo24
+Act 3 H2H A	Act 1 Junk	Act 3 Equip A	Act 3 Junk
+Act 3 H2H B	Act 1 Junk	Act 3 Equip B	Act 3 Junk
+Act 3 Junk	Act 2 Junk	Act 1 Junk	armo15
+Act 3 Magic A	armo18	armo21	armo24
+Act 3 Wraith A	Act 3 Good	Act 3 Magic A	armo3
+Act 4 Cast A	Act 1 Junk	Act 4 Equip A	Act 4 Junk
+Act 4 Equip A	armo24	armo24	armo27
+Act 4 Equip B	armo27	armo27	armo30
+Act 4 Good	armo27	armo30	armo30
+Act 4 H2H A	Act 1 Junk	Act 4 Equip A	Act 4 Junk
+Act 4 H2H B	Act 1 Junk	Act 4 Equip B	Act 4 Junk
+Act 4 Junk	Act 3 Junk	Act 2 Junk	armo24
+Act 4 Magic A	armo27	armo30	armo30
+Act 4 Wraith A	Act 4 Good	Act 4 Magic A	armo3
+Act 5 Cast C	Act 1 Junk	Act 5 Equip C	Act 5 Junk
+Act 5 Equip A	armo27	armo27	armo30
+Act 5 Equip B	armo30	armo30	armo33
+Act 5 Equip C	armo30	armo30	armo36
+Act 5 H2H A	Act 1 Junk	Act 5 Equip A	Act 5 Junk
+Act 5 H2H B	Act 1 Junk	Act 5 Equip B	Act 5 Junk
+Act 5 H2H C	Act 1 Junk	Act 5 Equip C	Act 5 Junk
+Act 5 Junk	Act 4 Junk	Act 3 Junk	armo30
+armo12	Helm	Ring Mail	Large Shield
+armo15	Scale Mail	Bracers	Chain Boots
+armo18	Full Helm	Chain Mail	Kite Shield
+armo21	Mask	Breast Plate	Splint Mail
+armo24	Great Helm	Tower Shield	Bone Helm
+armo27	Plate Mail	Spirit Mask	Avenger Guard
+armo3	Cap	Quilted Armor	Buckler
+armo30	Crown	Field Plate	Gaunlets
+armo33	Gothic Plate	Gothic Shield	Griffon Headress
+armo36	Light Plate	War Hat	Ghost Armor
+armo39	Full Plate Mail	Sallet	Serpentskin Armor
+armo6	Skull Cap	Leather Armor	Hard Leather Armor
+armo9	Studded Leather	Heavy Gloves	Heavy Boots
+Diablo	Act 1 Junk	Act 5 Equip A	Act 5 Junk
+Quill 1	Act 1 Junk	Act 1 Junk	armo3
+Quill 4	Act 1 Junk	Act 1 Junk	Act 1 Good
+Swarm 2	Act 1 Good	Act 2 Magic C	Act 3 Good
+Trapped Soul	Act 1 Junk	Act 4 Equip A	Act 4 Junk

@@ -1,1 +1,6 @@
-armo3	Quilted Armor	Buckler	Leather Armorarmo60a	Embossed Plate	Sun Spirit	Fury Visorarmo60b	Sacred Rondache	Mage Plate	DiademAct 5 (H) Equip A	armo60a	armo60a	armo3Act 5 (H) Equip B	armo60b	armo60b	Act 5 (H) Equip ACow (H)	Act 5 (H) Equip B	armo3	armo3
+armo3	Quilted Armor	Buckler	Leather Armor
+armo60a	Embossed Plate	Sun Spirit	Fury Visor
+armo60b	Sacred Rondache	Mage Plate	Diadem
+Act 5 (H) Equip A	armo60a	armo60a	armo3
+Act 5 (H) Equip B	armo60b	armo60b	Act 5 (H) Equip A
+Cow (H)	Act 5 (H) Equip B	armo3	armo3
