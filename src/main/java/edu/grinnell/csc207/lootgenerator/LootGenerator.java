@@ -182,43 +182,63 @@ public class LootGenerator {
 
     public static void main(String[] args) throws IOException {
         System.out.println("This program kills monsters and generates loot!");
-        LootGenerator loots = new LootGenerator();
-        Monster monster = loots.pickMonster(DATA_SET_SMALL + "/monstats.txt");
 
-        String treasureClass = loots.fetchTreasureClass(monster);
-        String armor = loots.generateBaseItem(DATA_SET_SMALL + "/TreasureClassEx.txt", treasureClass);
+        while (true) {
+            LootGenerator loots = new LootGenerator();
+            Monster monster = loots.pickMonster(DATA_SET_SMALL + "/monstats.txt");
 
-        int defenseNum = loots.generateBaseStats(DATA_SET_SMALL + "/armor.txt", armor);
+            String treasureClass = loots.fetchTreasureClass(monster);
+            String armor = loots.generateBaseItem(DATA_SET_SMALL + "/TreasureClassEx.txt", treasureClass);
 
-        String prefix = loots.generateAffix(DATA_SET_SMALL + "/MagicPrefix.txt");
-        String suffix = loots.generateAffix(DATA_SET_SMALL + "/MagicSuffix.txt");
-        String prefixStats = "";
-        String suffixStats = "";
+            int defenseNum = loots.generateBaseStats(DATA_SET_SMALL + "/armor.txt", armor);
 
-        if (prefix != "") {
-            String[] prefixParts = prefix.split("\t");
-            System.out.println(prefixParts[1] + prefixParts[2]);
-            prefix = prefixParts[0];
-            prefixStats = prefixParts[2] + " " + prefixParts[1];
-        }
+            String prefix = loots.generateAffix(DATA_SET_SMALL + "/MagicPrefix.txt");
+            String suffix = loots.generateAffix(DATA_SET_SMALL + "/MagicSuffix.txt");
+            String prefixStats = "";
+            String suffixStats = "";
 
-        if (suffix != "") {
-            String[] suffixParts = suffix.split("\t");
-            suffix = suffixParts[0];
-            suffixStats = suffixParts[2] + " " + suffixParts[1];
-        }
+            if (prefix != "") {
+                String[] prefixParts = prefix.split("\t");
+                prefix = prefixParts[0];
+                prefixStats = prefixParts[2] + " " + prefixParts[1];
+            }
 
-        System.out.println("Fighting " + monster.name + "...");
-        System.out.println("You have slain " + monster.name + "!");
-        System.out.println(monster.name + " dropped:");
-        System.out.println(prefix + " " + armor + " " + suffix);
-        System.out.println("Defense: " + defenseNum);
-        
-        if (prefixStats != "") {
-            System.out.println(prefixStats);
-        }
-        if (suffixStats != "") {
-            System.out.println(suffixStats);
+            if (suffix != "") {
+                String[] suffixParts = suffix.split("\t");
+                suffix = suffixParts[0];
+                suffixStats = suffixParts[2] + " " + suffixParts[1];
+            }
+
+            System.out.println("Fighting " + monster.name + "...");
+            System.out.println("You have slain " + monster.name + "!");
+            System.out.println(monster.name + " dropped:");
+            System.out.println(prefix + " " + armor + " " + suffix);
+            System.out.println("Defense: " + defenseNum);
+
+            if (prefixStats != "") {
+                System.out.println(prefixStats);
+            }
+            if (suffixStats != "") {
+                System.out.println(suffixStats);
+            }
+
+            while (true) {
+                System.out.println("Fight again [y/n]?");
+                Scanner inputScanner = new Scanner(System.in);
+                String playAgain = inputScanner.next();
+                String yes = "y";
+                String no = "n";
+
+                if (no.equalsIgnoreCase(playAgain)) {
+                    inputScanner.close();
+                    return;
+                } else if (yes.equalsIgnoreCase(playAgain)) {
+                    break;
+                } else {
+                    System.out.println("Please enter y or n.");
+                }
+                inputScanner.close();
+            }
         }
     }
 }
