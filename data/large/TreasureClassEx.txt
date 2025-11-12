@@ -11,7 +11,7 @@ Act 1 H2H C	Act 1 Junk	Act 1 Equip C	Act 1 Junk
 Act 1 Junk	armo3	armo3	armo3
 Act 1 Miss B	Act 1 Junk	Act 1 Equip B	Act 1 Junk
 Act 2 Cast A	Act 1 Junk	Act 2 Equip A	Act 2 Junk
-Act 2 Cast B    Act 1 Junk	Act 2 Equip B	Act 2 Junk
+Act 2 Cast B	Act 1 Junk	Act 2 Equip B	Act 2 Junk
 Act 2 Equip A	armo6	armo6	armo9
 Act 2 Equip B	armo9	armo9	armo12
 Act 2 Equip C	armo12	armo12	armo15

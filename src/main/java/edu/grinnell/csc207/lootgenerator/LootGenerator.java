@@ -13,7 +13,6 @@ public class LootGenerator {
     private static final String DATA_SET_LARGE = "data/large";
     private static final int TREASURE_OPTIONS = 3;
     
-
     public Monster pickMonster(String filename) throws IOException {
         Scanner monsterFile;
         monsterFile = new Scanner(new File(filename));
@@ -31,7 +30,6 @@ public class LootGenerator {
 
             Monster monster = new Monster(name, type, level, treasureClass);
             monsterList.add(monster);
-            
         }
 
         Random randomNumGenerator = new Random();
@@ -40,10 +38,6 @@ public class LootGenerator {
 
         monsterFile.close();
         return monster;
-        // System.out.println("name :" + monster.name);
-        // System.out.println("type :" + monster.type);
-        // System.out.println("level :" + monster.level);
-        // System.out.println("treasureClass :" + monster.treasureClass);
     }
 
     public String fetchTreasureClass(Monster monster) {
@@ -68,32 +62,31 @@ public class LootGenerator {
             TreasureClass treasure = new TreasureClass(name, item1, item2, item3);
             treasureList.put(treasure.name, treasure);
         }
+
         String curTreasure = treasureClassName;
+
         while(true) {
             if (treasureList.containsKey(curTreasure)) {
                 Random randomNumGenerator = new Random();
                 int randomNum = randomNumGenerator.nextInt(TREASURE_OPTIONS);
                 if (randomNum == 0) {
                     curTreasure = treasureList.get(curTreasure).item1;
-                    //System.out.println("1:" + curTreasure);
                     if (!treasureList.containsKey(curTreasure)) {
                         break;
                     }
                 } else if (randomNum == 1) {
                     curTreasure = treasureList.get(curTreasure).item2;
-                    //System.out.println("2:" + curTreasure);
                     if (!treasureList.containsKey(curTreasure)) {
                         break;
                     }
                 } else if (randomNum == 2) {
                     curTreasure = treasureList.get(curTreasure).item3;
-                    //System.out.println("3:" + curTreasure);
                     if (!treasureList.containsKey(curTreasure)) {
                         break;
                     }
                 }   
             } else {
-                System.out.println("The given treasureClass is not in data");
+                System.out.println("The given treasureClass is not in data.");
                 break;
             }
         }
@@ -125,6 +118,7 @@ public class LootGenerator {
 
         int minac = 0;
         int maxac = 0;
+
         if (armorList.containsKey(armorName)) {
             minac = armorList.get(armorName).minac;
             maxac = armorList.get(armorName).maxac;
@@ -138,7 +132,6 @@ public class LootGenerator {
         armorFile.close();
         return randomNum;
     }
-
 
     public String generateAffix(String affixFilename) throws IOException {
         Random affixGenerator = new Random();
@@ -186,15 +179,15 @@ public class LootGenerator {
 
         while (true) {
             LootGenerator loots = new LootGenerator();
-            Monster monster = loots.pickMonster(DATA_SET_SMALL + "/monstats.txt");
+            Monster monster = loots.pickMonster(DATA_SET_LARGE + "/monstats.txt");
 
             String treasureClass = loots.fetchTreasureClass(monster);
-            String armor = loots.generateBaseItem(DATA_SET_SMALL + "/TreasureClassEx.txt", treasureClass);
+            String armor = loots.generateBaseItem(DATA_SET_LARGE + "/TreasureClassEx.txt", treasureClass);
 
-            int defenseNum = loots.generateBaseStats(DATA_SET_SMALL + "/armor.txt", armor);
+            int defenseNum = loots.generateBaseStats(DATA_SET_LARGE + "/armor.txt", armor);
 
-            String prefix = loots.generateAffix(DATA_SET_SMALL + "/MagicPrefix.txt");
-            String suffix = loots.generateAffix(DATA_SET_SMALL + "/MagicSuffix.txt");
+            String prefix = loots.generateAffix(DATA_SET_LARGE + "/MagicPrefix.txt");
+            String suffix = loots.generateAffix(DATA_SET_LARGE + "/MagicSuffix.txt");
             String prefixStats = "";
             String suffixStats = "";
 
