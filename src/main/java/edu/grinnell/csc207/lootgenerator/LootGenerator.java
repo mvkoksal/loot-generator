@@ -182,6 +182,7 @@ public class LootGenerator {
 
     public static void main(String[] args) throws IOException {
         System.out.println("This program kills monsters and generates loot!");
+        Scanner inputScanner = new Scanner(System.in);
 
         while (true) {
             LootGenerator loots = new LootGenerator();
@@ -224,7 +225,6 @@ public class LootGenerator {
 
             while (true) {
                 System.out.println("Fight again [y/n]?");
-                Scanner inputScanner = new Scanner(System.in);
                 String playAgain = inputScanner.next();
                 String yes = "y";
                 String no = "n";
@@ -234,10 +234,7 @@ public class LootGenerator {
                     return;
                 } else if (yes.equalsIgnoreCase(playAgain)) {
                     break;
-                } else {
-                    System.out.println("Please enter y or n.");
                 }
-                inputScanner.close();
             }
         }
     }
