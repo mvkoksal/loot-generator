@@ -12,13 +12,19 @@ public class LootGenerator {
     private static final String DATA_SET_SMALL = "data/small";
     private static final String DATA_SET_LARGE = "data/large";
     private static final int TREASURE_OPTIONS = 3;
-    
+
+    /**
+     * Reads the given text file, creates a list of Monsters.
+     * Chooses a random monster from the list.
+     * @param filename
+     * @return the randomly chosen monster from the given file
+     */
     public Monster pickMonster(String filename) throws IOException {
         Scanner monsterFile;
         monsterFile = new Scanner(new File(filename));
 
         ArrayList<Monster> monsterList = new ArrayList<>();
-    
+        
         while(monsterFile.hasNextLine()) {
             String newLine = monsterFile.nextLine();
             String[] parts = newLine.split("\t");
@@ -40,10 +46,24 @@ public class LootGenerator {
         return monster;
     }
 
+    /**
+     * Takes a monster and returns its treasureClass.
+     * @param monster
+     * @return the given monster's treasure class
+     */
     public String fetchTreasureClass(Monster monster) {
         return monster.treasureClass;
     }
     
+    /**
+     * Reads the given text file, creates a list of treasure classes.
+     * Generates a base item of the given TC by looking it up in the given text file, 
+     * and randomly chooses one of three possible drops. If the drop we choose is a TC, 
+     * we look up that new TC and loop until we reach a base item.
+     * @param filename
+     * @param treasureClassName
+     * @return the randomly generated base item
+     */
     public String generateBaseItem(String filename, String treasureClassName) throws IOException {
         Scanner treasureFile;
         treasureFile = new Scanner(new File(filename));
@@ -94,6 +114,14 @@ public class LootGenerator {
         return curTreasure;
     }
         
+    /**
+     * Reads the given text file, creates a list of armors.
+     * Looks up the given armor in the list, and generates the defense strength
+     * value the armor based on the possible minimum and maximum.
+     * @param filename
+     * @param armorName
+     * @return the defense strength of the armor
+     */
     public int generateBaseStats(String filename, String armorName) throws IOException {
         Scanner armorFile;
         armorFile = new Scanner(new File(filename));
@@ -133,6 +161,15 @@ public class LootGenerator {
         return randomNum;
     }
 
+    /**
+     * An affix is generated 50% of the time. 
+     * Reads the given text file, creates a list of affixes, and 
+     * returns the affix along with its information as one string if generated
+     * @param affixFilename
+     * @return a string containing the affix name, a tab character, the additional 
+     * statistic text, a tab character,and the value of the additional statistic 
+     * in the min-max range.
+     */
     public String generateAffix(String affixFilename) throws IOException {
         Random affixGenerator = new Random();
         int affixGenerated = affixGenerator.nextInt(0,2);
@@ -191,24 +228,30 @@ public class LootGenerator {
             String prefixStats = "";
             String suffixStats = "";
 
+            // If the prefix is not generated, do nothing
             if (prefix != "") {
+                // Split the returned prefix string into its parts
                 String[] prefixParts = prefix.split("\t");
                 prefix = prefixParts[0];
                 prefixStats = prefixParts[2] + " " + prefixParts[1];
             }
 
+            // If the suffix is not generated, do nothing
             if (suffix != "") {
+                // Split the returned suffix string into its parts
                 String[] suffixParts = suffix.split("\t");
                 suffix = suffixParts[0];
                 suffixStats = suffixParts[2] + " " + suffixParts[1];
             }
 
+            // Print statements
             System.out.println("Fighting " + monster.name + "...");
             System.out.println("You have slain " + monster.name + "!");
             System.out.println(monster.name + " dropped:");
             System.out.println(prefix + " " + armor + " " + suffix);
             System.out.println("Defense: " + defenseNum);
 
+            // Don't print the prefix and suffix statistics if they were not generated
             if (prefixStats != "") {
                 System.out.println(prefixStats);
             }
@@ -216,6 +259,8 @@ public class LootGenerator {
                 System.out.println(suffixStats);
             }
 
+            // The input loop asking to play again
+            // If given input is invalid, prompt again
             while (true) {
                 System.out.println("Fight again [y/n]?");
                 String playAgain = inputScanner.next();
